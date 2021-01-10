@@ -1,0 +1,10 @@
+FROM golang:alpine AS builder
+
+WORKDIR $GOPATH/src/github.com/remotejob/go_from_scratch_service
+COPY main.go .
+RUN go build -o /go/app 
+
+FROM scratch
+COPY --from=builder /go/app /go/app
+
+CMD ["/go/app"]
