@@ -12,6 +12,7 @@ func main() {
     "moo", "spider", "lion", "apple",
     "tree", "moon", "snake", "mountain lion",
     "trooper", "burger", "nasa", "yes",
+    "trooper2", "burger2", "nasa2", "yes2",
   }
 
   rand.Seed(time.Now().UnixNano())
